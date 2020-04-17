@@ -4,7 +4,9 @@ from students.models import StudentProfile
 from courses.models import Course
 # Create your models here.
 
-
+class TypeEls(models.Model):
+    pass
+# retrieve all rollcontent in future 
 class Grade(models.Model):
     students = models.ManyToManyField(StudentProfile)
     course = models.ForeignKey(Course,on_delete=models.CASCADE, related_name='course_grade')
