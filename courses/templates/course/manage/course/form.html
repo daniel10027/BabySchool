@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    {% if object %}
+       {{ block.super }} Edit "{{ object.title }}" 
+   {% else %}
+    {{ block.super }} | Create Course
+   {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="main-content-inner">
+    <div class="row">
+        <div class="col-lg-6 col-ml-12">
+            <div class="row">
+                <div class="col-12 mt-5">
+
+                {% if object %}
+                    Edit "{{ object.title }}"
+                {% else %}
+                <h3>Create New Course</h3> 
+                {% endif %}
+                    
+                <form action="" method="post">
+                    {{ form|crispy }}
+                    {% csrf_token %}
+
+                    <input type="submit" class="btn btn-lg" style="background:#3e3b3b; color: aliceblue" value="{% if object %} Edit '{{ object.title }}' {% else %} Create Course {% endif %}">
+                </form>
+                </div>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+    
