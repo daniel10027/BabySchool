@@ -1,5 +1,4 @@
-# Get-Dev-Project-App-Expense-App
-Student Management System
+#BabySchool 
 =============
 ## DESCRIPTION
 A Student/Course Management System Implemented with django 
@@ -25,6 +24,6 @@ change the python_version to your system version in your Pipfile
 <p>  </p>
 
 ## Contributors
-* Goodness Ezeokafor : gootech442@gmail.com
+* Daniel Guedegbe : danielguedegbe10027@gmail.com
 
 # Happy Hacking!!
